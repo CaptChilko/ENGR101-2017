@@ -3,20 +3,22 @@
 #include "E101.h" 
 
 int adc_mean();
-int turn_left();
-int turn_right();
-int foward();
+int turn_left(double turnTime);
+int turn_right(double turnTime);
+int forward();
 int slowReverse();
+int ifWall();
 
 int main(){
 	//This sets up the RPi hardware and ensures everything is working correctly
 	init();
-	printf("ADC Mean: %d /n", adc_mean();
+	printf("ADC Mean: %d /n", adc_mean());
 	turn_left(0.5);
 	turn_right(0.5);
 	forward();
 	ifWall();
 	stop(0);
+	return 0;
 }
 
 int adc_mean(){
